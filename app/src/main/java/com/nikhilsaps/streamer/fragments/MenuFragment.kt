@@ -37,8 +37,7 @@ class MenuFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         val view:View=  inflater.inflate(R.layout.fragment_menu, container, false)
-        val text: TextView =view.findViewById(R.id.textmenu)
-        text.text = "menu"
+
 
         return view
     }

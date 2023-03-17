@@ -36,7 +36,8 @@ class MainActivity : AppCompatActivity() {
                 1 -> {
                     Toast.makeText(this, "Trending", Toast.LENGTH_SHORT).show()
                     trendingFragment = TrendingFragment()
-                    supportFragmentManager.beginTransaction().replace(R.id.fram_frag, trendingFragment)
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fram_frag, trendingFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
 
 
@@ -44,27 +45,25 @@ class MainActivity : AppCompatActivity() {
 
 
                 2 -> {
-                    Toast.makeText(this, "Explore", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "NEW", Toast.LENGTH_SHORT).show()
                     newFragment = NewFragment()
                     supportFragmentManager.beginTransaction().replace(R.id.fram_frag, newFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
-
 
 
                 }
                 3 -> {
 
 
-                    Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show()
                     menuFragment = MenuFragment()
                     supportFragmentManager.beginTransaction().replace(R.id.fram_frag, menuFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
 
 
-
                 }
                 4 -> {
-                    Toast.makeText(this, "Liked", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "home", Toast.LENGTH_SHORT).show()
                     homeFragment = HomeFragment()
                     supportFragmentManager.beginTransaction().replace(R.id.fram_frag, homeFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
@@ -74,12 +73,12 @@ class MainActivity : AppCompatActivity() {
                 5 -> {
                     Toast.makeText(this, "History", Toast.LENGTH_SHORT).show()
                     historyFragment = HistoryFragment()
-                    supportFragmentManager.beginTransaction().replace(R.id.fram_frag, historyFragment)
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fram_frag, historyFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
 
 
                 }
-
 
 
             }
