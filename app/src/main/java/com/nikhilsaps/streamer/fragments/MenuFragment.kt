@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.models.SlideModel
 import com.nikhilsaps.streamer.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -37,6 +39,12 @@ class MenuFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         val view:View=  inflater.inflate(R.layout.fragment_menu, container, false)
+        val imageList = ArrayList<SlideModel>()
+        var imageSlideTop :ImageSlider = view.findViewById(R.id.top_menu_image)
+        imageList.add(SlideModel("https://bit.ly/2YoJ77H", "The animal population decreased by 58 percent in 42 years."))
+        imageList.add(SlideModel("https://bit.ly/2BteuF2", "Elephants and tigers may become extinct."))
+        imageList.add(SlideModel("https://bit.ly/3fLJf72", "And people do that."))
+        imageSlideTop.setImageList(imageList)
 
 
         return view
